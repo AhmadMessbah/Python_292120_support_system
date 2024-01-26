@@ -1,4 +1,4 @@
-class response:
+class Response:
     def __init__(self, ticket, response_text, date_time, user, status="Open"):
         self.id = None
         self.ticket = ticket
