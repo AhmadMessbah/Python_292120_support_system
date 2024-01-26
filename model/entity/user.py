@@ -7,7 +7,10 @@ class User(Base):
     __tablename__ = "user_tbl"
     id = Column(Integer, primary_key=True)
     name = Column(String(30))
-
+    family = Column(String(30))
+    username = Column(String(30))
+    password = Column(String(30))
+    role = Column(String(30))
     status = Column(Boolean)
 
     def __init__(self, name, family, username, password, role, status=True):
