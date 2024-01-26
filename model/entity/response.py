@@ -6,3 +6,5 @@ class Response:
         self.date_time = date_time
         self.user = user
         self.status = status
+    def __repr__(self):
+        return str(self.__dict__)
