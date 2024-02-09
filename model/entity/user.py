@@ -21,3 +21,6 @@ class User(Base):
         self.password = password
         self.role = role
         self.status = status
+
+    def __repr__(self):
+        return str(self.__dict__)

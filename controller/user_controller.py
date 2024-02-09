@@ -3,12 +3,12 @@ from model.da.user_da import UserDa
 
 
 class UserController:
-    def save(self,  name, family, username, password, role, status=True):
+    @classmethod
+    def save(cls,  name, family, username, password, role, status=True):
         try:
             user = User(name, family, username,password, role,status)
             da = UserDa()
-            da.save(user)
-            return "user saved"
+            return da.save(user)
         except Exception as e:
             return e
     def edit(self,  id, name, family, username, password, role, status):
